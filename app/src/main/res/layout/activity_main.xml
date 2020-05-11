@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgvalute"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:text="@string/EUR"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editEuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editEuro" />
+
+    <TextView
+        android:id="@+id/dollaro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:text="@string/USD"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editDollaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editDollaro" />
+
+    <EditText
+        android:id="@+id/editEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginBottom="343dp"
+        android:ems="8"
+        android:hint="@string/euro"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editDollaro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:ems="8"
+        android:hint="@string/dollari"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEuro"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/converti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="doConverti"
+        android:text="@string/converti"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDollaro" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doReset"
+        android:text="@string/reset"
+        app:layout_constraintBaseline_toBaselineOf="@+id/converti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/converti" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

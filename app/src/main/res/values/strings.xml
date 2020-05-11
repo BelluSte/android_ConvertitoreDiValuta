@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Convertitore di Valuta</string>
+    <string name="EUR">€</string>
+    <string name="USD">$</string>
+    <string name="dollari">Dollari</string>
+    <string name="euro">Euro</string>
+    <string name="converti">CONVERTI</string>
+    <string name="reset">RESET</string>
+</resources>
